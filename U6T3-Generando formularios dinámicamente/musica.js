@@ -26,12 +26,15 @@ let optionIndie = document.createElement("option");
 let inputLocalizacion = document.createElement("input");
 let inputPrestado = document.createElement("input");
 
-/* Asignamos valores a los labels */
+/* Creamos el botón de enviar */
+let botonEnviar = document.createElement("button");
+
+/* Asignamos textos a los labels */
 labelDisco.appendChild(document.createTextNode("Disco:"));
 labelArtista.appendChild(document.createTextNode("Artista:"));
-labelAnio.appendChild(document.createTextNode("Anio:"));
-labelGenero.appendChild(document.createTextNode("Genero:"));
-labelLocalizacion.appendChild(document.createTextNode("Localizacion:"));
+labelAnio.appendChild(document.createTextNode("Año:"));
+labelGenero.appendChild(document.createTextNode("Género:"));
+labelLocalizacion.appendChild(document.createTextNode("Localización:"));
 labelPrestado.appendChild(document.createTextNode("Prestado"));
 
 /* Asignamos ids a los inputs */
@@ -45,6 +48,14 @@ optionPunk.id = "optPunk";
 optionIndie.id = "optIndie";
 inputLocalizacion.id = "iLocalizacion";
 inputPrestado.id = "iPresado";
+
+/* Asignamos los for a los labels */
+labelDisco.setAttribute("for", inputDisco.id);
+labelArtista.setAttribute("for", inputArtista.id);
+labelAnio.setAttribute("for", inputAnio.id);
+labelGenero.setAttribute("for", selectGenero.id);
+labelLocalizacion.setAttribute("for", inputLocalizacion.id);
+labelPrestado.setAttribute("for", inputPrestado.id);
 
 /* Asignamos type a los inputs */
 inputDisco.type = "text";
@@ -62,6 +73,15 @@ optionRock.textContent = "Rock";
 optionPop.textContent = "Pop";
 optionPunk.textContent = "Punk";
 optionIndie.textContent = "Indie";
+
+/* Asignamos valores al botón de enviar */
+botonEnviar.type = "submit";
+botonEnviar.id = "enviar";
+botonEnviar.textContent = "Enviar";
+
+/* Ponemos restricciones a los inputs a los que le sea necesario */
+inputAnio.min = 1582;
+inputAnio.max = new Date().getFullYear();
 
 /* Unimos todo el árbol DOM */
 formulario.appendChild(fieldset);
@@ -93,5 +113,7 @@ fieldset.appendChild(document.createElement("br"));
 fieldset.appendChild(labelPrestado);
 fieldset.appendChild(inputPrestado);
 fieldset.appendChild(document.createElement("br"));
+
+formulario.appendChild(botonEnviar);
 
 document.body.appendChild(formulario);

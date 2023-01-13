@@ -99,7 +99,7 @@ function crearInputTextarea(nombre) {
 function crearLabel(forId, texto) {
     let elemento = document.createElement("label");
 
-    elemento.for = forId;
+    elemento.setAttribute("for", forId);
     elemento.textContent = texto;
 
     document.body.appendChild(elemento);
