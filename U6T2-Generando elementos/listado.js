@@ -1,3 +1,7 @@
+/**
+ * @author David Martínez Merencio
+ */
+
 let botonAniadir = document.getElementById("botonAniadir");
 let listado = document.getElementById("listado");
 let botonBorrar1o = document.getElementById("botonBorrar1o");

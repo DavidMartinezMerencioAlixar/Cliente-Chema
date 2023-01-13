@@ -1,3 +1,7 @@
+/**
+ * @author David Martínez Merencio
+ */
+
 /* Creamos la base del formulario */
 let formulario = document.createElement("form");
 let fieldset = document.createElement("fieldset");
