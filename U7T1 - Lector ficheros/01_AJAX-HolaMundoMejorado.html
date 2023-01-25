@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hola mundo con AJAX mejorado</title>
+  <script>
+    
+    let READY_STATE_COMPLETE = 4;
+    let HTTP_STATUS_OK = 200;
+
+    let peticion_http;
+
+    window.onload = inicio;
+
+    function inicio() {
+      var boton = document.getElementById("boton");
+      var campo_texto = document.getElementById("campo_texto");
+      var area_texto = document.getElementById("area_texto");
+
+      area_texto.value = "";
+
+      campo_texto.value = window.location.href;
+
+      boton.addEventListener("click", carga_contenido);
+    }
+
+    function carga_contenido() {
+      if (window.XMLHttpRequest) {
+        peticion_http = new XMLHttpRequest();
+      } else {
+        alert("No tienes soporte para AJAX");
+        return;  // Salimos y no hacemos la petición
+      }
+
+      // Preparamos la petición
+      if (peticion_http) {
+        const URL = campo_texto.value;
+        // en la petición, me suscribo al evento "ReadyStateChange", y le 
+        // digo que me llame a muestra_contenido cada vez que suceda (que cambie el estado)
+        peticion_http.onreadystatechange = muestra_contenido;
+        peticion_http.open("GET", URL, true);
+        peticion_http.send();
+      }
+    }
+
+    function muestra_contenido() {
+      console.log(`readyState ${peticion_http.readyState}`);
+      if (peticion_http.readyState === READY_STATE_COMPLETE) {
+        if (peticion_http.status === HTTP_STATUS_OK) {
+          //alert(peticion_http.responseText);
+          area_texto.value = peticion_http.responseText;
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input id="campo_texto" type="url" size="70"></input>
+  <button id="boton">Mostrar contenido</button>
+  <br>
+  <textarea id="area_texto" rows="50" cols="100"></textarea>
+</body>
+
+</html>
