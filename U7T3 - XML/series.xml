@@ -1,0 +1,23 @@
+<series>
+    <serie>
+        <titulo>Dragon Ball Z</titulo>
+        <cadena>Manga</cadena>
+        <director>Akira Toriyama</director>
+        <anio>1989</anio>
+        <terminada>sí</terminada>
+    </serie>
+    <serie>
+        <titulo>Flash</titulo>
+        <cadena>HBO</cadena>
+        <director>Andrés Muschietti</director>
+        <anio>2010</anio>
+        <terminada>no</terminada>
+    </serie>
+    <serie>
+        <titulo>El Juego del Calamar</titulo>
+        <cadena>Netflix</cadena>
+        <director>Hwang Dong-hyuk</director>
+        <anio>2021</anio>
+        <terminada>sí</terminada>
+    </serie>
+</series>
