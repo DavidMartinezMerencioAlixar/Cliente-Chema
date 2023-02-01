@@ -1,0 +1,31 @@
+{
+    "series": [
+        {
+            "serie": {
+                "titulo": "Dragon Ball Z",
+                "cadena": "Manga",
+                "director": "Akira Toriyama",
+                "anio": 1989,
+                "terminada": "sí"
+            }
+        },
+        {
+            "serie": {
+                "titulo": "Flash",
+                "cadena": "HBO",
+                "director": "Andrés Muschietti",
+                "anio": 2010,
+                "terminada": "no"
+            }
+        },
+        {
+            "serie": {
+                "titulo": "El Juego del Calamar",
+                "cadena": "Netflix",
+                "director": "Hwang Dong-hyuk",
+                "anio": 2021,
+                "terminada": "sí"
+            }
+        }
+    ]
+}

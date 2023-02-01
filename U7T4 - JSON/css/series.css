@@ -1,0 +1,24 @@
+#tablaSeries, #tablaSeries th, #tablaSeries td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+.rojo {
+    color: red;
+}
+
+.amarillo {
+    color: rgb(255, 204, 0);
+}
+
+.verde {
+    color: green;
+}
+
+img {
+    width: 25px;
+    height: auto;
+    margin-left: 4px;
+}
