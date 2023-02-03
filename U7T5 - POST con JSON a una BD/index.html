@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST con JSON a BD</title>
+    <script defer src="./code.js"></script>
+</head>
+<body>
+    <form id="formulario" action="javascript:void(0)">
+        <label for="titulo">Título:</label>
+        <input id="iTitulo" name="titulo" type="text" required>
+        <label for="director">Director:</label>
+        <input id="iDirector" name="director" type="text" required>
+        <label for="cadena">Cadena:</label>
+        <input id="iCadena" name="cadena" type="text" required>
+        <label for="anyo">Año:</label>
+        <input id="iAnyo" name="anyo" type="number" min="1000" max="9999" required>
+        <label for="terminada">Terminada:</label>
+        <input id="iTerminada" name="terminada" type="checkbox">
+        <button id="bSubmit" type="submit">Enviar</button>
+    </form>
+</body>
+</html>
