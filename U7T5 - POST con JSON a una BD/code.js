@@ -31,9 +31,9 @@ function enviarPeticion() {
 
     if (XMLHttpRequest) {
         xhr = new XMLHttpRequest();
-        let url = "./create_serie.php";
+        const URL = "./create_serie.php";
 
-        xhr.open("POST", url);
+        xhr.open("POST", URL);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = tratarRespuesta;
 
